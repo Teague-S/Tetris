@@ -32,8 +32,8 @@ public class Board {
     public void clearRows() {
         for (int i = 0; i < 26; i++) {
             boolean shouldClear = true;
-            for (int t = 1; t < 13; t++) {
-                if (!board[t][i].isOccupied()) {
+            for (int o = 1; o < 13; o++) {
+                if (!board[o][i].isOccupied()) {
                     shouldClear = false;
                     break;
                 }
