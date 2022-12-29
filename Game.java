@@ -124,16 +124,16 @@ public class Game {
 
     private void handleKeyPress(KeyEvent e) {
         KeyCode keyPressed = e.getCode();
-        if (keyPressed == KeyCode.RIGHT && this.playing) {
+        if (keyPressed == KeyCode.UP && this.playing) {
+            this.rotate();
+        } else if (keyPressed == KeyCode.DOWN && this.playing) {
+            this.moveDown();
+        } else if (keyPressed == KeyCode.RIGHT && this.playing) {
             this.moveRight();
         } else if (keyPressed == KeyCode.LEFT && this.playing) {
             this.moveLeft();
         } else if (keyPressed == KeyCode.SPACE && this.playing) {
             this.fullDown();
-        } else if (keyPressed == KeyCode.UP && this.playing) {
-            this.rotate();
-        } else if (keyPressed == KeyCode.DOWN && this.playing) {
-            this.moveDown();
         } else if (keyPressed == KeyCode.P) {
             if (this.playing) {
                 this.timeline.pause();

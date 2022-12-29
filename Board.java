@@ -39,21 +39,21 @@ public class Board {
                 }
             }
             if (shouldClear) {
-                for (int y = 0; y < board.length; y++) {
-                    for (int t = 0; t < board[0].length; t++) {
-                        this.boardPane.getChildren().remove(board[y][t].getShape());
+                for (int k = 0; k < board.length; k++) {
+                    for (int j = 0; j < board[0].length; j++) {
+                        this.boardPane.getChildren().remove(board[k][j].getShape());
                     }
                 }
-                for (int t = 1; t < 13; t++) {
-                    for (int x = i; x > 1; x--) {
-                        board[t][x] = board[t][x - 1];
-                        board[t][x - 1].getShape().setY(board[t][x - 1].getShape().getY() + 25);
+                for (int k = 1; k < 13; k++) {
+                    for (int j = i; j > 1; j--) {
+                        board[k][j] = board[k][j - 1];
+                        board[k][j - 1].getShape().setY(board[k][j - 1].getShape().getY() + 25);
                     }
-                    board[t][1] = new Square(t, 1);
+                    board[k][1] = new Square(k, 1);
                 }
-                for (int y = 0; y < board.length; y++) {
-                    for (int t = 0; t < board[0].length; t++) {
-                        this.boardPane.getChildren().add(board[y][t].getShape());
+                for (int k = 0; k < board.length; k++) {
+                    for (int j = 0; j < board[0].length; j++) {
+                        this.boardPane.getChildren().add(board[k][j].getShape());
                     }
                 }
                 i--;
